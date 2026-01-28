@@ -1,0 +1,86 @@
+/**
+ * API Endpoints Example Template (Obfuscated)
+ * 
+ * Copy this file to endpoints.ts and adjust the paths to match your backend structure.
+ * This file is tracked in Git, while endpoints.ts is ignored for security.
+ */
+
+export const API_BASE = '/api/v1';
+
+export const ENDPOINTS = {
+    // Resource Group 1
+    RESOURCE_A: `${API_BASE}/endpoint1`,
+    RESOURCE_A_BY_ID: (id: number | string) => `${API_BASE}/endpoint1/${id}`,
+    RESOURCE_A_ACTION: (id: number | string) => `${API_BASE}/endpoint1/${id}/action`,
+
+    // Resource Group 2
+    RESOURCE_B: (parentId: number | string) => `${API_BASE}/group/${parentId}/items`,
+    RESOURCE_B_BY_ID: (parentId: number | string, itemId: number | string) => `${API_BASE}/group/${parentId}/items/${itemId}`,
+    RESOURCE_B_REORDER: (parentId: number | string) => `${API_BASE}/group/${parentId}/items/reorder`,
+    RESOURCE_B_SEARCH: `${API_BASE}/search-items`,
+    RESOURCE_B_EXTRA: (code: string) => `${API_BASE}/items/${encodeURIComponent(code)}/extra`,
+
+    // System Actions
+    SYS_LOCK: (id: number | string) => `${API_BASE}/system/lock/${id}`,
+
+    // Persistence
+    PERSIST: (id: number | string) => `${API_BASE}/system/persist/${id}`,
+
+    // Entities
+    ENTITY_TYPE_A: `${API_BASE}/entity-a`,
+    ENTITY_TYPE_A_BY_CODE: (code: string) => `${API_BASE}/entity-a/${code}`,
+    ENTITY_TYPE_A_SEARCH: `${API_BASE}/entity-a/find`,
+    ENTITY_TYPE_B: (code: string) => `${API_BASE}/entity-b/${code}`,
+    ENTITY_TYPE_B_STATUS: (code: string) => `${API_BASE}/entity-b/${code}/status`,
+    ENTITY_TYPE_B_ATTRS: (code: string) => `${API_BASE}/entity-b/${code}/attributes`,
+    ENTITY_TYPE_C: (code: string) => `${API_BASE}/entity-c/${code}`,
+    ENTITY_TYPE_C_REPLACE: (code: string) => `${API_BASE}/entity-c/${code}/replace`,
+
+    // Metadata
+    META_DATA_1: `${API_BASE}/meta/data-1`,
+    META_DATA_1_BY_CODE: (code: string) => `${API_BASE}/meta/data-1/${code}`,
+    META_DATA_2: `${API_BASE}/meta/data-2`,
+    META_DATA_2_DETAILS: (id: number | string) => `${API_BASE}/meta/data-2/${id}/details`,
+    META_DATA_3: `${API_BASE}/meta/data-3`,
+    META_DATA_CALC: `${API_BASE}/meta/calculate`,
+
+    // Versions / History
+    HIST_LIST: (id: number | string) => `${API_BASE}/history/${id}/list`,
+    HIST_CREATE: (id: number | string) => `${API_BASE}/history/${id}/new`,
+    HIST_PREVIEW: (id: number | string) => `${API_BASE}/history/${id}/preview`,
+    HIST_RESTORE: (id: number | string) => `${API_BASE}/history/${id}/restore`,
+    HIST_ANALYZE: (id: number | string) => `${API_BASE}/history/${id}/analyze`,
+    HIST_MERGE: (id: number | string) => `${API_BASE}/history/${id}/merge`,
+
+    // Integration
+    INT_FROM_SOURCE: (id: number | string) => `${API_BASE}/integrate/source/${id}`,
+    INT_HISTORY_BY_ID: (id: number | string) => `${API_BASE}/integrate/history/${id}`,
+    INT_HISTORY_BY_REF: (ref: string) => `${API_BASE}/integrate/history/ref/${ref}`,
+    INT_ITEM_BY_REF: (ref: string) => `${API_BASE}/integrate/items/ref/${ref}`,
+    INT_T_DETAILS: (ref: string) => `${API_BASE}/integrate/t-details/${ref}`,
+    INT_RELATIONS: `${API_BASE}/integrate/relations`,
+    INT_DOC_DETAILS: (ref: string) => `${API_BASE}/integrate/docs/${ref}`,
+    INT_STORE_DETAILS: `${API_BASE}/integrate/store/details`,
+    INT_STORE_ITEMS: `${API_BASE}/integrate/store/items`,
+
+    // Export
+    EXP_GENERATE: (id: number | string) => `${API_BASE}/export/${id}/generate`,
+    EXP_FILE: (id: number | string) => `${API_BASE}/export/${id}/file`,
+    EXP_FILE_VERSION: (id: number | string, v: number | string) => `${API_BASE}/export/${id}/file/v/${v}`,
+
+    // Auth / Permissions
+    AUTH_PERMISSIONS: `${API_BASE}/auth/my-permissions`,
+
+    // External Masters
+    EXT_MASTER_1: '/ext/master-1',
+    EXT_MASTER_2: '/ext/master-2',
+    EXT_MASTER_3: '/ext/master-3',
+    EXT_MASTER_4: '/ext/master-4',
+    EXT_MASTER_5: '/ext/master-5',
+    EXT_MASTER_6: '/ext/master-6',
+    EXT_MASTER_7: '/ext/master-7',
+
+    // Global Search
+    GLOBAL_USER_SEARCH: '/global/users',
+    GLOBAL_CLIENT_SEARCH: '/global/clients/search',
+};

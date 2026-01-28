@@ -1,0 +1,51 @@
+{
+  "name": "smartorder-glassmorphism",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@chakra-ui/icons": "^2.1.1",
+    "@chakra-ui/react": "^2.8.2",
+    "@chakra-ui/system": "^2.6.2",
+    "@chakra-ui/theme-tools": "^2.1.2",
+    "@emotion/cache": "^11.11.0",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
+    "@fontsource/plus-jakarta-sans": "^5.0.18",
+    "@tanstack/react-table": "^8.15.0",
+    "@types/react-datepicker": "^7.0.0",
+    "apexcharts": "^5.3.6",
+    "axios": "^1.7.2",
+    "date-fns": "^3.6.0",
+    "framer-motion": "^11.2.10",
+    "js-cookie": "^3.0.5",
+    "leaflet": "^1.9.4",
+    "lodash": "^4.17.21",
+    "react": "^18.3.1",
+    "react-apexcharts": "^1.9.0",
+    "react-datepicker": "^9.1.0",
+    "react-dom": "^18.3.1",
+    "react-dropzone": "^14.3.8",
+    "react-icons": "^5.2.1",
+    "react-leaflet": "^4.2.1",
+    "react-router-dom": "^6.24.1",
+    "react-to-print": "^2.15.1"
+  },
+  "devDependencies": {
+    "@types/js-cookie": "^3.0.6",
+    "@types/leaflet": "^1.9.8",
+    "@types/lodash": "^4.17.0",
+    "@types/node": "^20.12.7",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.10"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:check": "tsc && vite build",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit"
+  }
+}

@@ -1,0 +1,11 @@
+node_modules
+package-lock.json
+build
+dist
+.env
+.env.local
+.env.*.local
+*.log
+.DS_Store
+src/api/endpoints.ts
+.claude
